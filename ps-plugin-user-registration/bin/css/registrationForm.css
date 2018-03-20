@@ -1,0 +1,164 @@
+a.cancelbutton {
+	color: #3498DB !important;
+	border-radius: 0px;
+}
+
+input.submitbutton {
+	color: #fff !important;
+	border-radius: 0px;
+}
+
+.radio{
+	display: block;
+}
+
+
+/* Appian Login Page CSS */
+.login_box {
+	width: 100% !important;
+	border-radius: 10px;
+	left: auto !important;
+	top: 20px !important;
+	margin: auto;
+}
+
+.login_box_inner {
+	position: relative !important;
+	width: 750px !important;
+	margin: 0 auto !important;
+}
+
+.fieldset_layout {
+	margin: 15px 0px 15px 0px;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.select_sizing {
+	font-size: 15px;
+}
+
+#recaptcha {
+	margin: 15px 0px 15px 0px;
+}
+
+.cancelButton {
+	text-align: left;
+
+}
+
+p.blue {
+	color: #00529b;
+	padding: 10px;
+	background-color: #bde5f8;
+	border: 1px solid #00529b;
+}
+
+p.green {
+	color: #4f8a10;
+	padding: 10px;
+	background-color: #dff2bf;
+	border: 1px solid #4f8a10;
+}
+
+p.red {
+	color: #d8000c;
+	padding: 10px;
+	background-color: #ffbaba;
+	border: 1px solid #d8000c;
+}
+
+em.red {
+	color: red;
+}
+
+.customValidation {
+	color: #d8000c;
+	padding-top:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+}
+
+.select_sizing {
+	padding-top:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+}
+
+label.error {
+	color: #d8000c;
+}
+
+p.bold {
+	text-weight: bold;
+}
+
+.login_box input[type=email] {
+	padding: 6px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #c7c7c7;
+    color: #333;
+}
+
+.buffer {
+	height: 100px;
+}
+
+/* Bootstrap CSS */
+body {
+	font-family: "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+div.container {
+	min-width: 980px;
+	margin: 0 auto;
+}
+
+.highlight {
+	background:#ECF6CE;
+}
+
+div.daMapping.tbody {
+	font-size: 0.8em;
+}
+
+p {
+	color:#a94442;
+	font-size: 0.8em;
+}
+
+td {
+	font-size:13px;
+}
+
+.help-block {
+	margin-left:7px;
+}
+
+input.error {
+	border-color: #a94442;
+}
+
+.error {
+	color: #a94442;
+}
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+input:not(:focus):invalid {
+  outline: 2px solid red;
+}
+input:focus:invalid {
+  outline: none;
+}

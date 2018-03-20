@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet"
+	href="/suite/portal/css/standard_styles.jsp?appian_environment=designer"
+	type="text/css" />
+<link rel="shortcut icon"
+	href="/suite/portal/img/appian_16x16.ico?appian_environment=" />
+<link rel="icon"
+	href="/suite/portal/img/appian_48x48.png?appian_environment="
+	sizes="48x48" />
+<link rel="icon"
+	href="/suite/portal/img/appian_32x32.png?appian_environment="
+	sizes="32x32" />
+<link rel="stylesheet"
+	href="/suite/portal/css/login.css?appian_environment=designer"
+	type="text/css" />
+<title>$loginPage.siteName</title> $loginPage.favicon
+<style>
+$loginPage.loginCss
+</style>
+<script language="javascript" type="text/javascript">
+#include("js/appian.js")
+</script>
+
+#if( $loginPage.form == "registrationForm")
+<style>
+#include("css/bootstrap.min.css")
+</style>
+<style>
+#include("css/bootstrap-theme.min.css")
+</style>
+<style>
+#if( $loginPage.form == "registrationForm")
+#include("css/registrationForm.css")
+#else
+#include("css/terms.css")
+#end
+</style>
+<script language="javascript" src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+<script language="javascript" type="text/javascript">
+#include("js/bootstrap.min.js")
+</script>
+
+
+
+<script language="javascript" type="text/javascript">
+#include("js/jquery.js")
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+#end
+
+</head>
+<body
+	onload="try{if(document.getElementsByName('un')[0].value.length>0) {document.getElementsByName('pw')[0].focus();} else { document.getElementsByName('un')[0].focus();}}catch(e){}">
+
+<!-- Start Appian Form Container -->
+#if($loginPage.form != "registrationForm")
+<div class="appian_logo"></div>
+	<div class="login_box">
+		<div class="login_box_inner">
+			<div class="login_logo">
+				<img id="logo" src="$loginPage.logoUri" alt="Appian" />
+			</div>
+#end
+
+#if($loginPage.form == "registrationForm")
+#parse("templates/registrationForm.htm")
+
+#elseif($loginPage.form == "existing")
+#parse("templates/existing.htm")
+
+#elseif($loginPage.form == "success")
+#parse("templates/success.htm")
+
+#elseif($loginPage.form == "failed")
+#parse("templates/failed.htm")
+
+#end
+
+<!-- End Appian Form Container -->
+#if($loginPage.form != "registrationForm")
+			</div>
+		</div>
+#end
+  <div class="buffer"></div>
+	<div id="copyright" style="height: auto; text-align: center">
+		$loginPage.disclaimer
+	</div>
+
+	<script language="javascript" type="text/javascript">
+	#include("js/jquery.validate.min.js")
+	</script>
+	<script language="javascript" type="text/javascript">
+	#include("js/additional-methods.min.js")
+	</script>
+	<script language="javascript" type="text/javascript">
+	#parse("js/registrationForm.js")
+	</script>
+
+</body>
+</html>

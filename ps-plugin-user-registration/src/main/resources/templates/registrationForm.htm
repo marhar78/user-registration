@@ -1,0 +1,290 @@
+<form method="post" id="form">
+  <div class="container">
+    <div class="header">
+      <h3 class="text-primary"></h3>
+    </div>
+  </div>
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">$loginPage.pageTitle</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="login_logo">
+              <img id="logo" src="$loginPage.logoUri" alt="MHRA" />
+            </div>
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                  <b>Organisation details</b>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="orgName">Organisation name</label> 
+                          <input type="text" name="orgName" id="orgName" class="form-control" placeholder="Organisation to be registered with MHRA"   minlength="2" maxlength="200"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-body">
+                    <!-- /.row -->
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="orgAddr1">Address line 1</label>
+						  
+                          <input type="text" name="orgAddr1" class="form-control" id="orgAddr1"   minlength="1" maxlength="200"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="orgAddr2">Address line 2 (optional)</label>
+                          <input type="text" name="orgAddr2" class="form-control" id="orgAddr2"  minlength="0" maxlength="200"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="orgAddr2">Address line 3 (optional)</label>
+                          <input type="text" name="orgAddr3" class="form-control" id="orgAddr3"  minlength="0" maxlength="200" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="orgAddr2">Address line 4 (optional)</label>
+                          <input type="text" name="orgAddr4" class="form-control" id="orgAddr4"  minlength="0" maxlength="200" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="city">Town/City</label>
+                          <input type="text" name="city" class="form-control" id="city"  minlength="2" maxlength="200"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="county">County/State/Province (optional)</label>
+                          <input type="text" name="county" class="form-control" id="county"    minlength="0" maxlength="200"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="country">Country</label>
+                          <select class="selectpicker form-control" data-style="btn-primary" id="country" name="country">
+                            $loginPage.countryList
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="postcode">Postcode</label>
+                          <input type="text" name="postcode" class="form-control" id="postcode"  minlength="5" maxlength="10"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="website">Website address</label>
+<!-- 						   <small><i>(Please enter your organisation's website address)</i></small> -->
+                          <input type="url" name="website" class="form-control" id="website" placeholder="http://www.yourorg.co.uk" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="legalType">Company type</label>
+                          <select class="selectpicker form-control" onchange="displayQuestion(this.value)" data-style="btn-primary" id="legalType" name="legalType">
+                            $loginPage.compTypes
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="busType">Organisation description</label>
+                          <select class="selectpicker form-control" data-style="btn-primary" id="orgType" name="busType">
+                            $loginPage.orgTypes
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="VATReg" id="vatReg" style="display:none;">
+                          <label for="VATReg">VAT registration number(optional)</label>
+                          <input type="text" name="VATReg" class="form-control" id="VATReg"   minlength="0" maxlength="100"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group" id="coReg"  style="display:none;">
+                          <label for="coReg">Company registration number (optional)</label>
+                          <input type="text" name="coReg" class="form-control" id="coReg"   minlength="0" maxlength="100"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                    </div>
+              </div>
+              <div class="panel-heading">
+                  <!-- <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> -->
+                  <b>User details</b>
+                  <!-- </a> -->
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="email">Email address</label>
+                          <input type="text" name="email" id="email" class="form-control"  validate type="email"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+
+                        <div class="form-group">
+                          <label for="title"> Title (optional)</label>
+                          <select class="selectpicker form-control" data-style="btn-primary" id="title" name="title">
+                            $loginPage.titles
+                          </select>
+                        </div>
+                       <div class="form-group" id="otherTitleDiv">
+                          <label for="otherTitle"><em class="red">*</em> If other, please specify</label>
+                          <input type="text" name="otherTitle" id="otherTitle" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          <label for="firstName">First name</label>
+                          <input type="text" name="firstName" class="form-control" id="firstName"   minlength="1" maxlength="200"/>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastName">Last name</label>
+                          <input type="text" name="lastName" class="form-control" id="lastName"   minlength="1" maxlength="200"/>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastName">Job title (optional)</label>
+                          <input type="text" name="jobTitle" class="form-control" id="jobTitle"   minlength="1" maxlength="200"/>
+                        </div>
+                      </div>
+                      <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="phoneNumber">Telephone number</label>
+						   <small><i>(Please enter your phone number without any spaces)</i></small>
+                          <input type="text" name="telephone" class="form-control" id="telephone"   minlength="5" maxlength="200"/>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <!-- <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> -->
+                  <b>What is your primary reason for requesting an MHRA account?</b>
+                  <!-- </a> -->
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                  <div class="panel-body">
+	                  <div class="form-group">
+	                          <div class="radio col-md-12">$loginPage.services</div>                         
+	                  </div>                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <!-- <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"> -->
+                  <b>Terms and Conditions</b>
+                  <!-- </a> -->
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in">
+                  <div class="panel-body">
+
+                    <div class="form-group">
+                      <div class="checkbox col-md-12">
+                        <label><input type="checkbox" value="1" name="terms" id="terms" /> I have read and agreed to the <a target="_blank" href="$loginPage.terms">MHRA Terms and Conditions</a></label>
+                      </div>
+                      <div id="checkbox-error"></div>
+                    </div>
+					
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <!-- <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> -->
+                  <b>Help us make sure you are not a robot</b>
+                  <!-- </a> -->
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <div class="g-recaptcha" data-sitekey="$loginPage.publicKey" data-callback="recaptchaCallback"></div>
+                      <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-action">
+                <div class="button_box">
+                  <div class="button_box_content">
+                    <div class="button_box_buttons">
+
+                        <a class="btn cancel default_direction pull-left cancelbutton" href="/suite">Cancel</a>
+
+
+                      <div id="signup-btn">
+                        <input id="signupbutton" name="signupbutton" class="btn primary pull-right submitbutton" type="submit" value="Submit"/>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!--For making spaces -->
+      </div>
+    </div>
+  </div>
+
+
+
+</form>

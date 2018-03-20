@@ -1,0 +1,45 @@
+/* Appian Login Page CSS */
+.login_box {
+	width: 100% !important;
+	border-radius: 10px;
+	left: auto !important;
+	top: 20px !important;
+	margin: auto;
+}
+
+.login_box_inner {
+	position: relative !important;
+	width: 750px !important;
+	margin: 0 auto !important;
+}
+
+/* Bootstrap CSS */
+body {
+	font-family: "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif !important; 
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+div.container {
+	min-width: 980px;
+	margin: 0 auto;
+}
+
+div.daMapping.tbody {
+	font-size: 0.8em;
+}
+
+.list-group {
+		border: 0;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+}
+
+.list-group-item {
+		border: 0;
+    display: list-item;
+    text-indent: -1.5em;
+    padding-left: 2em;
+    list-style: decimal inside;
+}

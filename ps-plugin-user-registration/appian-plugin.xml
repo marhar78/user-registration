@@ -1,0 +1,13 @@
+<appian-plugin name="Registration" key="registration-qld">
+  <plugin-info>
+    <description>Registration</description>
+    <vendor name="Appian Corporation" url="http://www.appian.com" />
+    <version>4.0.1</version>
+    <application-version min="7.10" />
+  </plugin-info>
+
+  <!-- /suite/plugins/servlet/registration -->
+  <servlet name="User Registration" key="userRegistration" class="com.appiancorp.ps.registration.servlet.RegistrationServlet">
+    <url-pattern>/registration</url-pattern>
+  </servlet>
+</appian-plugin>
